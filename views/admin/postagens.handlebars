@@ -1,0 +1,39 @@
+<header>
+    <header class="masthead" style="background: linear-gradient(to right, #33AEFF, #0062E6); height:350px;">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="page-heading">
+                        <h2>Listar postagens</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</header>
+
+{{>_arrow-left}}
+<div class="container">
+    <a href="/admin/postagens/add"><button class="btn btn-success mt-5">Nova postagem</button></a>
+
+    {{#each postagens}}
+    <div class="card mt-4">
+        <div class="card-body">
+            <h4>{{titulo}}</h4>
+            <p><strong>Descrição:</strong> {{descricao}}</p>
+            <small>Data: {{formatTime data "DD-MM-YYYY"}}</small><br>
+            <small>Categoria: {{categoria.nome}}</small><br>
+            <a href="/admin/postagens/edit/{{_id}}"><button class="btn btn-success mt-3">Editar postagem</button></a>
+            <form action="/admin/postagens/deletar" method="POST">
+                <input type="hidden" name="id" value="{{_id}}">
+                <button type="submit" onclick="confirmAlert()" class="btn btn-danger mt-3">Deletar postagem</button>
+            </form>
+        </div>
+    </div>
+
+    {{else}}
+    <h4>Nenhuma postagem registrada!</h4>
+    {{/each}}
+
+</div>

@@ -1,0 +1,13 @@
+<style>
+    a span {
+        float: right;
+    }
+</style>
+
+{{#if success_msg}}
+<div class="alert alert-success">{{success_msg}} <a href=""><span><i class="far fa-times-circle"></i></span></a> </div>
+{{/if}}
+
+{{#if error_msg}}
+<div class="alert alert-danger">{{error_msg}} <a href=""><span><i class="far fa-times-circle"></i></span></a> </div>
+{{/if}}

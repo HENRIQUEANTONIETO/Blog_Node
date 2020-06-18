@@ -1,0 +1,42 @@
+<header>
+    <header class="masthead" style="background: linear-gradient(to right, #33AEFF, #0062E6); height:350px;">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="page-heading">
+                        <h2>Listar categorias</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</header>
+
+{{>_arrow-left}}
+<div class="container">
+
+    <a href="/admin/categorias/add"><button class="btn btn-success mt-5">Nova categoria</button></a>
+
+    {{#each categorias}}
+    <div class="card mt-4">
+        <div class="card-body">
+            <h4>{{nome}}</h4>
+            <small>{{slug}}</small><br>
+            <small>Data de criação: {{formatTime data "DD-MM-YYYY"}}</small><br>
+            <a href="/admin/categorias/edit/{{_id}}"><button class="btn btn-success mt-4">Editar categoria</button></a>
+            <form action="/admin/categorias/deletar" method="POST">
+                <input type="hidden" name="id" id="hidden" value="{{_id}}">
+                <button type="submit" onclick="confirmAlert()" class="btn btn-danger mt-2">
+                    Deletar categoria
+                </button>
+            </form>
+        </div>
+    </div>
+
+    {{else}}
+    <h5 class="mt-4">Nenhuma categoria registrada!</h5>
+
+    {{/each}}
+
+</div>

@@ -1,0 +1,48 @@
+{{#each erros}}
+<div class="alert alert-danger">{{texto}}<a href=""><span><i class="far fa-times-circle"></i></span></a></div>
+{{else}}
+
+{{/each}}
+
+<header>
+    <header class="masthead" style="background: linear-gradient(to right, #0062E6, #33AEFF); height:350px;">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="page-heading">
+                        <h2>Mensagens</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</header>
+
+{{>_arrow-left}}
+<div class="container">
+
+    {{#each mensagens}}
+    <div class="card mt-4">
+        <div class="card-body">
+            <span><strong> Nome: </strong> {{nome}}</span><br>
+            <span><strong>Email:</strong> {{email}}</span><br>
+            <span><strong>Telefone:</strong> {{tel}}</span><br>
+            <span><strong>Mensagem:</strong> {{txtMensagem}}</span><br>
+            <small><strong>Data de envio:</strong> {{formatTime data "DD-MM-YYYY, HH:mm"}}</small><br>
+
+            <form action="/admin/mensagens/deletar" method="POST">
+                <input type="hidden" name="id" id="hidden" value="{{_id}}">
+                <button type="submit" class="btn btn-danger mt-2">
+                    Deletar mensagem
+                </button>
+            </form>
+        </div>
+    </div>
+
+    {{else}}
+    <h5 class="mt-4">Nenhuma mensagem!</h5>
+
+    {{/each}}
+
+</div>

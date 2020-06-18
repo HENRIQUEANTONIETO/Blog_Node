@@ -1,0 +1,22 @@
+  <header class="masthead" style="background-image: url('../img/laptop-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>{{postagem.titulo}}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<div class="card">
+    <div class="card-body">
+        <h1>{{postagem.titulo}}</h1>
+        <hr>
+        <small>Data da publicação: {{formatTime postagem.data "DD-MM-YYYY"}}</small><br>
+        <hr>
+        <p>{{postagem.conteudo}}</p>
+    </div>
+</div>

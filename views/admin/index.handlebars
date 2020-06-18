@@ -1,0 +1,59 @@
+<style>
+    h1,
+    h2 {
+        text-align: center;
+    }
+
+    header h2 {
+        font-size: 2.2em;
+    }
+
+    .row {
+        height: 5px;
+    }
+
+    div.page-heading {
+        text-align: center;
+        height: 0;
+    }
+</style>
+
+<header>
+    <header class="masthead" style="background: linear-gradient(to right, #0062E6, #33AEFF); height:350px;">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="page-heading">
+                        <h2>Painel administrativo</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</header>
+
+
+<div class="container">
+
+    <a class="btn btn-primary mb-5" href="/admin/mensagens">Mensagens</a>
+
+    <div class="card mb-4">
+        <h2>Postagens:</h2>
+        <div class="card-body">
+            <a class="btn btn-success mb-4 btn-block " href="/admin/postagens">Listar Postagens</a><br>
+            <a class="btn btn-primary btn-block" href="/admin/postagens/add">Cadastrar Postagem</a>
+
+        </div>
+    </div>
+
+    <hr>
+    <div class="card mb-4">
+        <h2>Categoria:</h2>
+        <div class="card-body">
+            <a class="btn btn-success mb-4 btn-block" href="/admin/categorias">Listar Categorias</a><br>
+            <a class="btn btn-primary btn-block" href="/admin/categorias/add">Cadastrar Categorias</a>
+        </div>
+    </div>
+
+</div>

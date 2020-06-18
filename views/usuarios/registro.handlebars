@@ -1,0 +1,65 @@
+{{#each erros}}
+    <div class="alert alert-danger">{{texto}} <a href=""><span><i class="far fa-times-circle"></i></span></a> </div>
+{{/each}}
+<link rel="stylesheet" href="../../css/register.css">
+
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Cadastro</h5>
+            <form class="form-signin" action="/usuarios/registro" method="POST">
+               <div class="form-label-group">
+                <input type="nome" id="inputNome" name="nome" class="form-control" placeholder="Nome" required autofocus>
+                <label for="inputNome">Nome</label>
+              </div>  
+
+              <div class="form-label-group">
+                <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email" required autofocus>
+                <label for="inputEmail">Email</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="password" id="inputPassword" name="senha" class="form-control" placeholder="Senha" required>
+                <label for="inputPassword">Senha</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="password" id="inputPassword2" name="senha2" class="form-control" placeholder="Confirmar senha" required>
+                <label for="inputPassword2">Confirmar senha</label>
+              </div>
+
+              <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">Lembrar Senha</label>
+              </div>
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Criar conta</button>
+              <hr class="my-4">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{{!-- <h3>Crie sua conta:</h3>
+<div class="card">
+    <div class="card-body">
+        <form action="" method="POST">
+            <label for="nome">Nome:</label>
+                <input type="text" name="nome" required class="form-control"> 
+
+            <label for="email">E-mail:</label>
+                <input type="email" name="email" required class="form-control">
+
+            <label for="senha">Senha:</label>
+                <input type="password" name="senha" required class="form-control">
+
+            <label for="senha2">Confirme sua senha:</label>
+                <input type="password" name="senha2" required class="form-control">
+
+            <button type="submit" class="btn btn-success mt-4">Criar conta</button>
+        </form>
+    </div>
+</div> --}}

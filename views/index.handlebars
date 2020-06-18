@@ -1,0 +1,48 @@
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('../img/home-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h1>Blog do node</h1>
+            
+              <a class="btn btn-lg btn-primary mr-5 mt-3 rounded border border-light" 
+              href="/usuarios/registro">Criar uma conta</a>
+            
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      {{#each postagens}}
+      <div class="post-preview">
+        <a href="/postagem/{{slug}}">
+          <h2 class="post-title">
+            {{titulo}}
+          </h2>
+          <h5 class="post-subtitle">
+            {{descricao}}
+          </h5>
+        </a>
+        <p class="post-meta">Categoria:
+          <a href="/categorias/{{categoria.slug}}">{{categoria.nome}}</a>
+          Criado em:
+          <strong>{{formatTime data "DD-MM-YYYY"}}</strong></p>
+      </div>
+      <hr>
+      {{else}}
+      <h5>Nenhuma postagem</h5>
+      {{/each}}
+      <!-- Pager -->
+
+    </div>
+  </div>
+</div>
+

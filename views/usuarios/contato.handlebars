@@ -1,0 +1,60 @@
+{{#each erros}}
+    <div class="alert alert-danger">{{texto}} <a href=""><span><i class="far fa-times-circle"></i></span></a> </div>
+{{/each}}
+
+<!-- Page Header --> 
+  <header class="masthead" style="background-image: url('../img/contact-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>Contato</h1>
+            <span class="subheading">Tem perguntas? Eu tenho respostas.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+    <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <p>
+          Quer entrar em contato? Preencha o formulário abaixo para nos enviar uma mensagem e retornaremos o mais breve possível!
+        </p>
+
+        <form action="/usuarios/mensagens/nova" method="POST">
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Nome</label>
+              <input type="text" class="form-control" placeholder="Nome" name="nome" required >
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Email</label>
+              <input type="email" class="form-control" placeholder="Email" name="email" required >
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+              <label>Telefone</label>
+              <input type="tel" class="form-control" placeholder="Telefone (opcional)" name="tel">
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Mensagem</label>
+              <textarea rows="5" class="form-control" placeholder="Mensagem" name="txtMensagem" required ></textarea>
+            </div>
+          </div>
+          <br>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary" >Enviar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
