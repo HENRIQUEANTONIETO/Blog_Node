@@ -21,7 +21,7 @@ O admin da página terá seu painel administrativo na rota '/admin', onde poder�
   - Cadastro de postagens
      - Editar
      - Apagar
-  - Vizualizar mensagens recebidas
+  - Visualizar mensagens recebidas
      - Apagar
      
 > Status do Projeto: Concluido :heavy_check_mark:     
