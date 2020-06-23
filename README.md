@@ -7,7 +7,7 @@ O admin da página terá seu painel administrativo na rota '/admin', onde poder�
 ## Tecnologias usadas:
 <img src="https://img.shields.io/static/v1?label=JavaScript&message=Linguagem&color=blue&style=for-the-badge&logo=JavaScript"/> <img src="https://img.shields.io/static/v1?label=Node.js&message=Plantaforma&color=blue&style=for-the-badge&logo=Node.js"/> <img src="https://img.shields.io/static/v1?label=Handlebars&message=Tamplate&color=blue&style=for-the-badge&logo=handlebars.js"/> <img src="https://img.shields.io/static/v1?label=MongoDB&message=Banco_de_Dados&color=blue&style=for-the-badge&logo=MongoDB"/> <img src="https://img.shields.io/static/v1?label=Bootstrap&message=Design&color=blue&style=for-the-badge&logo=Bootstrap"/>
 
-### Pricipais funcionalidades:
+### Principais funcionalidades:
 - Listagem das postagens
 - Filtrar postagens por categorias
 - Enviar mensagem para o ADMIN 
