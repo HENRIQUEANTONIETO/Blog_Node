@@ -10,7 +10,7 @@
     "express": "^4.17.1",
     "express-handlebars": "^4.0.4",
     "express-session": "^1.17.1",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "moment": "^2.26.0",
     "mongoose": "^5.9.15",
     "passport": "^0.4.1",
